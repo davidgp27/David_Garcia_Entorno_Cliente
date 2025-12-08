@@ -11,3 +11,10 @@ const cofre = {
   },
   [tesoroSymbol]: " Un diamante brillante"
 };
+
+let cofreClonado = null;
+
+
+function mostrarPista() {
+  document.getElementById("pista").textContent = cofre.contenido.mensaje;
+}
