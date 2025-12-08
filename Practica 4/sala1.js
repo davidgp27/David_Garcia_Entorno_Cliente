@@ -17,4 +17,17 @@ let cofreClonado = null;
 
 function mostrarPista() {
   document.getElementById("pista").textContent = cofre.contenido.mensaje;
-}
+};
+
+function clonarCofre() {
+
+  cofreClonado = JSON.parse(JSON.stringify(cofre));
+
+  cofreClonado.abrir = function () {
+    return this[tesoroSymbol];
+  };
+
+  cofreClonado[tesoroSymbol] = cofre[tesoroSymbol];
+
+  alert("Cofre clonado con éxito");
+};
