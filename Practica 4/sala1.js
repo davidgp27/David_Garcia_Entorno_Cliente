@@ -31,3 +31,14 @@ function clonarCofre() {
 
   alert("Cofre clonado con éxito");
 };
+
+function abrirClon() {
+  if (!cofreClonado) {
+    alert("Primero debes clonar el cofre.");
+    return;
+  }
+  const tesoro = cofreClonado.abrir();
+  alert("Has encontrado: " + tesoro);
+
+  window.location.href = "sala2.html";
+}
