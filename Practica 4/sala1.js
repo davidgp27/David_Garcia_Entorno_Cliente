@@ -12,6 +12,30 @@ const cofre = {
   [tesoroSymbol]: " Un diamante brillante"
 };
 
+
+//Mostar por consola el symbol y su descripción.
+
+console.log(tesoroSymbol);
+console.log(tesoroSymbol.description);
+
+//Mostrar por consola las propiedades del objeto original
+console.log("Propiedades del Objeto Cofre: ")
+for (let key in cofre){
+    console.log (key);
+    console.log (cofre[key]);  
+}
+
+
+//Clonar objeto y mostrar propiedades por consola
+
+let clone = Object.assign({}, cofre);
+console.log("Propiedades del Objeto Cofre clonado: ")
+for (let key in clone){
+    console.log (key);
+    console.log (clone[key]);  
+}
+
+
 let cofreClonado = null;
 
 
@@ -31,6 +55,7 @@ function clonarCofre() {
 
   alert("Cofre clonado con éxito");
 };
+
 
 function abrirClon() {
   if (!cofreClonado) {
