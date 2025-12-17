@@ -38,8 +38,19 @@ const lucesValidas = lucesJuego
 
   //Commit 5
 
-  function pulsarLuz(color) {
+document.getElementById("mensaje").textContent = reglas.get("mensaje");
+
+const listaPistas = document.getElementById("pistas");
+reglas.get("pistas").forEach(pista => {
+  const li = document.createElement("li");
+  li.textContent = pista;
+  listaPistas.appendChild(li);
+});
+
+function pulsarLuz(color) {
   seleccionJugador.push(color);
+  document.getElementById("seleccion").textContent =
+    "Has pulsado: " + seleccionJugador.join(" → ");
 }
 
 function comprobarPanel() {
@@ -50,8 +61,12 @@ function comprobarPanel() {
   );
 
   if (correcto && seleccionJugador.length === ordenCorrecto.length) {
+    alert("Panel desbloqueado");
     window.location.href = "sala3.html";
   } else {
+    alert("Secuencia incorrecta");
     seleccionJugador = [];
+    document.getElementById("seleccion").textContent = "";
   }
 }
+  
