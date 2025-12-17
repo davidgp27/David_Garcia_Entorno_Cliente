@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sala 2 - Panel de Seguridad</title>
+</head>
+<body>
+
+  <h1>Sala 2: Panel de Seguridad</h1>
+
+  <p id="mensaje"></p>
+
+  <h3>Pistas:</h3>
+  <ul id="pistas"></ul>
+
+  <div>
+    <button onclick="pulsarLuz('roja')">Roja</button>
+    <button onclick="pulsarLuz('verde')">Verde</button>
+    <button onclick="pulsarLuz('azul')">Azul</button>
+    <button onclick="pulsarLuz('amarilla')">Amarilla</button>
+    <button onclick="pulsarLuz('morada')">Morada</button>
+  </div>
+
+  <br>
+
+  <button onclick="comprobarPanel()">Comprobar panel</button>
+
+  <p id="seleccion"></p>
+
+  <script src="sala2.js"></script>
+</body>
+</html>
