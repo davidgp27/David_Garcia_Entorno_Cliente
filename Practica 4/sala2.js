@@ -27,7 +27,10 @@ reglas.set("mensaje", "Activa las luces correctas siguiendo las pistas");
 
 const lucesUnicas = new Set(luces);
 const lucesArray = Array.from(lucesUnicas);
-const lucesJuego = [...lucesArray];
+const lucesJuego = [...lucesArray]; //copia del array original
+
+//ya tengo el array creado y modificado con los metodos, ahora solo le agrego el console.log para que salga por consola.
+console.log[lucesJuego]
 
 //Commit 4
 
@@ -35,6 +38,13 @@ const lucesValidas = lucesJuego
   .filter(color => reglas.get("correctas").includes(color))
   .sort();
 
+//Esto es para la practica de la segunda sala
+    let [color1, color2, color3, color4, color5] = lucesUnicas
+    console.log(color1);
+    console.log(color2);
+
+    for (let valor of reglas)
+        console.log(valor)
 
   //Commit 5
 
