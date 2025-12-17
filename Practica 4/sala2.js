@@ -35,3 +35,23 @@ const lucesValidas = lucesJuego
   .filter(color => reglas.get("correctas").includes(color))
   .sort();
 
+
+  //Commit 5
+
+  function pulsarLuz(color) {
+  seleccionJugador.push(color);
+}
+
+function comprobarPanel() {
+  const ordenCorrecto = reglas.get("orden");
+
+  const correcto = seleccionJugador.every(
+    (color, index) => color === ordenCorrecto[index]
+  );
+
+  if (correcto && seleccionJugador.length === ordenCorrecto.length) {
+    window.location.href = "sala3.html";
+  } else {
+    seleccionJugador = [];
+  }
+}
