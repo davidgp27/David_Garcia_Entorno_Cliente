@@ -29,3 +29,9 @@ const lucesUnicas = new Set(luces);
 const lucesArray = Array.from(lucesUnicas);
 const lucesJuego = [...lucesArray];
 
+//Commit 4
+
+const lucesValidas = lucesJuego
+  .filter(color => reglas.get("correctas").includes(color))
+  .sort();
+
