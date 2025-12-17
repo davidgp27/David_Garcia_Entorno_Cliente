@@ -23,4 +23,9 @@ reglas.set("pistas", [
 
 reglas.set("mensaje", "Activa las luces correctas siguiendo las pistas");
 
+//Commit 3
+
+const lucesUnicas = new Set(luces);
+const lucesArray = Array.from(lucesUnicas);
+const lucesJuego = [...lucesArray];
 
