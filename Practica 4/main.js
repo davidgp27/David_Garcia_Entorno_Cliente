@@ -1,15 +1,24 @@
-import SalaAdivinanzas from "./salas/SalaAdivinanzas.js";
+import SalaAdivinanzas from "./salas3/SalaAdivinanzas.js";
 
 const sala = new SalaAdivinanzas();
+
+const pregunta = document.getElementById("pregunta");
+const mensaje = document.getElementById("mensaje");
+const contador = document.getElementById("contador");
+
+pregunta.textContent = sala.obtenerPregunta();
+contador.textContent = sala.progreso();
 
 window.responder = function () {
   const input = document.getElementById("respuesta");
 
   try {
-    alert(sala.responder(input.value));
+    mensaje.textContent = sala.responder(input.value);
+    pregunta.textContent = sala.obtenerPregunta();
   } catch (error) {
-    alert(error.message);
+    mensaje.textContent = error.message;
   }
 
+  contador.textContent = sala.progreso();
   input.value = "";
 };

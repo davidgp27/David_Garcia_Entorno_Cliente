@@ -2,8 +2,10 @@ import Sala from "./sala.js";
 
 export default class SalaAdivinanzas extends Sala {
 
-    static ACIERTOS_NECESARIOS = 3;
+  // PROPIEDAD ESTÁTICA
+  static ACIERTOS_NECESARIOS = 3;
 
+  // PROPIEDADES PRIVADAS
   #preguntas;
   #indice;
   #aciertos;
@@ -22,30 +24,31 @@ export default class SalaAdivinanzas extends Sala {
   }
 
   obtenerPregunta() {
-    return this.#preguntas[this.#indice].pregunta;
+  if (this.#indice >= this.#preguntas.length) {
+    return "No hay más preguntas";
   }
+  return this.#preguntas[this.#indice].pregunta;
+}
 
   responder(texto) {
+  this.#comprobarRespuesta(texto.toLowerCase());
+  this.#aciertos++;
+  this.#indice++;
 
-    try {
-        this.#comprobarRespuesta(texto.toLowerCase());
-        this.#aciertos++;
-        this.#indice++;
+  if (this.#aciertos === SalaAdivinanzas.ACIERTOS_NECESARIOS) {
+    throw new Error(" Has acertado 3. Sala superada.");
+  }
 
-        if(this.#aciertos === SalaAdivinanzas.ACIERTOS_NECESARIOS){
-        throw new Error ("Has superado la sala");
-    }
-    
-        return "Correcto";
-    } catch (error){
-        throw error;
-    }
-    
+  return " Correcto";
+}
+
+  progreso() {
+    return `Aciertos: ${this.#aciertos} / ${SalaAdivinanzas.ACIERTOS_NECESARIOS}`;
   }
 
   #comprobarRespuesta(respuesta) {
-    if  (respuesta !== this.#preguntas[this.#indice].respuesta){
-        throw new Error ("Respuesta incorrecta");
+    if (respuesta !== this.#preguntas[this.#indice].respuesta) {
+      throw new Error(" Respuesta incorrecta");
     }
   }
 }
