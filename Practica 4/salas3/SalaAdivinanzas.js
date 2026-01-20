@@ -26,19 +26,27 @@ export default class SalaAdivinanzas extends Sala {
   }
 
   responder(texto) {
-    if (this.#comprobarRespuesta(texto.toLowerCase())) {
-      this.#aciertos++;
-      this.#indice++;
-      if(this.#aciertos === SalaAdivinanzas.ACIERTOS_NECESARIOS){
-        return "Has superado la sala";
-      }
-      return "Correcto";
+
+    try {
+        this.#comprobarRespuesta(texto.toLowerCase());
+        this.#aciertos++;
+        this.#indice++;
+
+        if(this.#aciertos === SalaAdivinanzas.ACIERTOS_NECESARIOS){
+        throw new Error ("Has superado la sala");
     }
-    return "Incorrecto";
+    
+        return "Correcto";
+    } catch (error){
+        throw error;
+    }
+    
   }
 
   #comprobarRespuesta(respuesta) {
-    return respuesta === this.#preguntas[this.#indice].respuesta;
+    if  (respuesta !== this.#preguntas[this.#indice].respuesta){
+        throw new Error ("Respuesta incorrecta");
+    }
   }
 }
 
