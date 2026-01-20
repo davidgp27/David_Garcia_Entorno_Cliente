@@ -2,6 +2,8 @@ import Sala from "./sala.js";
 
 export default class SalaAdivinanzas extends Sala {
 
+    static ACIERTOS_NECESARIOS = 3;
+
   #preguntas;
   #indice;
   #aciertos;
@@ -27,8 +29,12 @@ export default class SalaAdivinanzas extends Sala {
     if (this.#comprobarRespuesta(texto.toLowerCase())) {
       this.#aciertos++;
       this.#indice++;
+      if(this.#aciertos === SalaAdivinanzas.ACIERTOS_NECESARIOS){
+        return "Has superado la sala";
+      }
       return "Correcto";
     }
+    return "Incorrecto";
   }
 
   #comprobarRespuesta(respuesta) {
