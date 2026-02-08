@@ -24,3 +24,20 @@ mesa.addEventListener('click', () => {
         alert("¡CUIDADO! Has tocado la mesa. Tienes 1 intento más.");
     }
 });
+
+// Práctica Unidad 5. Sala Laboratorio. Recoger frascos y dar pistas
+let frascos = document.querySelectorAll('.frasco');
+frascos.forEach((frasco, index) => {
+    frasco.addEventListener('click', (e) => {
+        
+        e.stopPropagation(); 
+        
+        if (e.target.style.backgroundColor !== "lime") {
+            e.target.style.backgroundColor = "lime";
+            frascosRecogidos++;
+            passwordDescubierta += pistas[index];
+            mensajeTeclado.innerText = `Pista obtenida. Password actual: ${passwordDescubierta}`;
+            mensajeTeclado.style.color = "blue";
+        }
+    });
+});
