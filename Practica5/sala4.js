@@ -41,3 +41,22 @@ frascos.forEach((frasco, index) => {
         }
     });
 });
+
+// Práctica Unidad 5. Sala Laboratorio. Validación alfanumérica y teclas especiales
+inputCodigo.addEventListener('keydown', (e) => {
+    
+    // Tecla Enter para comprobar la victoria
+    if (e.key === 'Enter') {
+        if (frascosRecogidos === 3 && inputCodigo.value.toUpperCase() === "AGENTE007") {
+            alert("¡SALA COMPLETADA! Has descifrado el código y recogido las muestras.");
+            // Aquí iría el enlace a la Sala 2
+        } else {
+            alert("Código incorrecto o te faltan frascos.");
+        }
+    }
+
+    // Tecla Escape para limpiar el terminal
+    if (e.key === 'Escape') {
+        inputCodigo.value = "";
+    }
+    });
