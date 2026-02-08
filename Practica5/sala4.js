@@ -59,4 +59,14 @@ inputCodigo.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
         inputCodigo.value = "";
     }
+
+// Práctica Unidad 5. Sala Laboratorio. Validación alfanumérica y preventDefault
+    let permitido = /^[a-zA-Z0-9]$/;
+    if (!permitido.test(e.key) && e.key.length === 1) {
+        e.preventDefault(); 
+        mensajeTeclado.innerText = "Error: Solo letras y números";
+        mensajeTeclado.style.color = "red";
+    }
+
     });
+
