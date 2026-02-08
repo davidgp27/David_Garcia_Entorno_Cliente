@@ -1,0 +1,33 @@
+body { font-family: sans-serif; background-color: #f0f0f0; text-align: center; }
+
+#mesa {
+    width: 500px;
+    height: 300px;
+    background-color: #8b4513;
+    margin: 20px auto;
+    position: relative;
+    border: 10px solid #5d2e0a;
+}
+
+.frasco {
+    width: 80px;
+    height: 100px;
+    background-color: #00ffff;
+    border: 2px solid #333;
+    display: inline-block;
+    margin: 50px 20px;
+    cursor: pointer;
+    line-height: 100px;
+}
+
+#info-sensor {
+    font-weight: bold;
+    color: #d32f2f;
+    margin-bottom: 10px;
+}
+
+#panel-seguridad {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ddd;
+}
