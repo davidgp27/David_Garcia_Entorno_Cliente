@@ -13,3 +13,14 @@ let pistas = ["AGE", "NTE", "007"];
 mesa.addEventListener('mousemove', (e) => {
     textoCoords.innerText = `X: ${e.clientX}, Y: ${e.clientY}`;
 });
+
+// Práctica Unidad 5. Sala Laboratorio. Control de errores y burbujeo
+mesa.addEventListener('click', () => {
+    errores++;
+    if (errores >= 2) {
+        alert("¡DEMASIADOS ERRORES! La seguridad te ha pillado. Reiniciando...");
+        location.reload();
+    } else {
+        alert("¡CUIDADO! Has tocado la mesa. Tienes 1 intento más.");
+    }
+});
