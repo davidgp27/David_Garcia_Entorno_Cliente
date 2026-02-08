@@ -1,0 +1,15 @@
+// Práctica Unidad 5. Sala Laboratorio. Variables y coordenadas del sensor
+let frascosRecogidos = 0;
+let errores = 0;
+let passwordDescubierta = "";
+
+let mesa = document.getElementById('mesa');
+let textoCoords = document.getElementById('coords');
+let inputCodigo = document.getElementById('input-codigo');
+let mensajeTeclado = document.getElementById('mensaje-teclado');
+
+let pistas = ["AGE", "NTE", "007"];
+
+mesa.addEventListener('mousemove', (e) => {
+    textoCoords.innerText = `X: ${e.clientX}, Y: ${e.clientY}`;
+});

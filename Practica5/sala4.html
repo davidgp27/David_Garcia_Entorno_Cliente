@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Escape Room - Sala Laboratorio</title>
+    <link rel="stylesheet" href="sala4.css">
+</head>
+<body>
+
+    <h1>Sala 5: El Laboratorio Químico</h1>
+    <p>Objetivo: Recoge los frascos sin tocar la mesa y descifra el código.</p>
+
+    <div id="info-sensor">
+        Coordenadas del sensor: <span id="coords">X: 0, Y: 0</span>
+    </div>
+
+    <div id="mesa">
+        <div class="frasco" id="frasco1">Poción A</div>
+        <div class="frasco" id="frasco2">Poción B</div>
+        <div class="frasco" id="frasco3">Poción C</div>
+    </div>
+
+    <div id="panel-seguridad">
+        <label for="input-codigo">Introduce ID de Agente (Letras y Números):</label><br>
+        <input type="text" id="input-codigo" placeholder="Escribe aquí...">
+        <p id="mensaje-teclado"></p>
+    </div>
+
+    <script src="sala4.js"></script>
+</body>
+</html>
