@@ -70,3 +70,28 @@ inputCodigo.addEventListener('keydown', (e) => {
 
     });
 
+let tengoTarjeta = false; 
+let monitorOk = false;
+
+// Práctica Unidad 5. Sala Seguridad. Arrastrar y soltar (Drag and Drop)
+let miTarjeta = document.getElementById('tarjeta-id');
+let elLector = document.getElementById('lector-biometrico');
+
+miTarjeta.addEventListener('dragstart', function(e) {
+    // Guardo el ID de lo que estoy moviendo
+    e.dataTransfer.setData("text", e.target.id);
+});
+
+elLector.addEventListener('dragover', function(e) {
+    e.preventDefault(); 
+});
+
+elLector.addEventListener('drop', function(e) {
+    e.preventDefault();
+    let datos = e.dataTransfer.getData("text");
+    if (datos == "tarjeta-id") {
+        tengoTarjeta = true;
+        elLector.innerHTML = "TARJETA LEÍDA";
+        elLector.style.background = "lightgreen";
+    }
+});
