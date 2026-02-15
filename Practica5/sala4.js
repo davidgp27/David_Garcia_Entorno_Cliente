@@ -145,3 +145,9 @@ zonaBotones.addEventListener('click', function(e) {
         e.stopPropagation(); // Corto el evento aquí para que no siga subiendo
     }
 });
+
+// Práctica Unidad 5. Sala Seguridad. Evento personalizado
+document.addEventListener('salaTerminada', function() {
+    alert("¡HAS GANADO! Sala completada.");
+    document.body.style.background = "orange";
+});
