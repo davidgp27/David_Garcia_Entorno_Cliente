@@ -112,3 +112,27 @@ manualito.addEventListener('scroll', function() {
     manualito.style.backgroundColor = "grey";
 });
 
+// Práctica Unidad 5. Sala Seguridad. Formulario y Expresiones Regulares
+let miForm = document.getElementById('form-final');
+miForm.addEventListener('submit', function(e) {
+    // Práctica Unidad 5. Uso de preventDefault
+    e.preventDefault(); // Para que no se recargue la página al dar al botón
+    
+    // Esta es la RegEx para el código SEC- y 4 números
+    let miExpresion = /^SEC-\d{4}$/; 
+    let textoEscrito = document.getElementById('input-final').value;
+
+    if (tengoTarjeta == true && monitorOk == true) {
+        if (miExpresion.test(textoEscrito)) {
+            // Práctica Unidad 5. Evento personalizado con CustomEvent
+            let eventoVictoria = new CustomEvent('salaTerminada');
+            document.dispatchEvent(eventoVictoria);
+        } else {
+            alert("Error: El código debe ser tipo SEC-1234");
+        }
+    } else {
+        alert("Falta pasar la tarjeta o ajustar el tamaño de la ventana");
+    }
+});
+
+
