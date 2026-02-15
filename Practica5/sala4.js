@@ -106,10 +106,10 @@ window.addEventListener('resize', function() {
 });
 
 // Práctica Unidad 5. Sala Seguridad. Evento de desplazamiento
-let manualito = document.getElementById('manual-instrucciones');
-manualito.addEventListener('scroll', function() {
+let manual = document.getElementById('manual-instrucciones');
+manual.addEventListener('scroll', function() {
     // Cuando el usuario baja el texto, el fondo se pone gris
-    manualito.style.backgroundColor = "grey";
+    manual.style.backgroundColor = "grey";
 });
 
 // Práctica Unidad 5. Sala Seguridad. Formulario y Expresiones Regulares
@@ -135,3 +135,13 @@ miForm.addEventListener('submit', function(e) {
     }
 });
 
+// Práctica Unidad 5. Sala Seguridad. Delegación de eventos y propagación
+let zonaBotones = document.getElementById('contenedor-ayuda');
+zonaBotones.addEventListener('click', function(e) {
+    if (e.target.className == 'btn-extra') {
+        alert("Pista: El código es SEC- seguido de cuatro números");
+        
+        // Práctica Unidad 5. Detener propagación
+        e.stopPropagation(); // Corto el evento aquí para que no siga subiendo
+    }
+});
