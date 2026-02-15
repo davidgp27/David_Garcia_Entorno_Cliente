@@ -111,4 +111,3 @@ manualito.addEventListener('scroll', function() {
     // Cuando el usuario baja el texto, el fondo se pone gris
     manualito.style.backgroundColor = "grey";
 });
-
