@@ -95,3 +95,20 @@ elLector.addEventListener('drop', function(e) {
         elLector.style.background = "lightgreen";
     }
 });
+
+// Práctica Unidad 5. Sala Seguridad. Evento de redimensión 
+// Uso window porque el evento es de la ventana del navegador
+window.addEventListener('resize', function() {
+    if (window.innerWidth < 800) {
+        monitorOk = true;
+        console.log("Monitor calibrado correctamente");
+    }
+});
+
+// Práctica Unidad 5. Sala Seguridad. Evento de desplazamiento
+let manualito = document.getElementById('manual-instrucciones');
+manualito.addEventListener('scroll', function() {
+    // Cuando el usuario baja el texto, el fondo se pone gris
+    manualito.style.backgroundColor = "grey";
+});
+
