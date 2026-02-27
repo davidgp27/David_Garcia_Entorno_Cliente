@@ -14,7 +14,7 @@ mesa.addEventListener('mousemove', (e) => {
     textoCoords.innerText = `X: ${e.clientX}, Y: ${e.clientY}`;
 });
 
-// Práctica Unidad 5. Sala Laboratorio. Control de errores y burbujeo
+// Práctica Unidad 5. Sala Laboratorio. Control de errores 
 mesa.addEventListener('click', () => {
     errores++;
     if (errores >= 2) {
@@ -137,10 +137,14 @@ miForm.addEventListener('submit', function(e) {
 
 // Práctica Unidad 5. Sala Seguridad. Delegación de eventos y propagación
 let zonaBotones = document.getElementById('contenedor-ayuda');
+
+//Aqui le he agregado al evento un alert con la informacion del nodo.
 zonaBotones.addEventListener('click', function(e) {
+    alert(zonaBotones.parentElement);
+    alert(zonaBotones.childNodes);
+    alert(zonaBotones.nextElementSibling);
     if (e.target.className == 'btn-extra') {
         alert("Pista: El código es SEC- seguido de cuatro números");
-        
         // Práctica Unidad 5. Detener propagación
         e.stopPropagation(); // Corto el evento aquí para que no siga subiendo
     }
@@ -151,3 +155,58 @@ document.addEventListener('salaTerminada', function() {
     alert("¡HAS GANADO! Sala completada.");
     document.body.style.background = "orange";
 });
+
+
+//Aqui mostraremos los datos del navegador 
+
+function mostrar_navegador(){
+    let navegador = document.getElementById("navegador");
+    navegador.innerHTML= `<strong>User-Agent:</strong> ${navigator.userAgent}`;
+}
+
+//Estos son los datos de locacion, en este caso el url 
+
+function mostrarInfoLocation() {
+    let location = document.getElementById("Location");
+    location.innerHTML = `
+        <strong>URL completa:</strong> ${location.href}<br>`;
+}
+
+
+
+mostrar_navegador();
+mostrarInfoLocation();
+
+
+//aqui creamos contenido dinamicamente al final de la pagina
+const resultado = document.getElementById("resultado");
+
+const elem = document.getElementById("crear");
+elem.addEventListener("click", () => {
+
+    resultado.innerHTML = ""; 
+
+    section = document.createElement("section");
+
+    titulo = document.createElement("h3");
+    titulo.textContent = "creamos un titulo";
+
+    parrafo = document.createElement("p");
+    parrafo.textContent = "creamos un parrafo";
+
+    // Se inserta contenido en el div
+    section.append(titulo);
+    section.append(parrafo);
+
+    // Se inserta el resultado en el panel principal
+    resultado.append(section);
+});
+
+
+
+
+
+
+
+
+

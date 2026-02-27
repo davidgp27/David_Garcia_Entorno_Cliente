@@ -26,30 +26,35 @@
         <p id="mensaje-teclado"></p>
     </div>
      <div id="seccion-final" style="margin-top: 50px; border-top: 2px dashed black; padding-top: 20px;">
-    <h2>Fase 2: Terminal de Seguridad Máxima</h2>
-    
-    <div id="manual-instrucciones" style="height: 80px; overflow-y: scroll; background: #eee; border: 1px solid #ccc; padding: 10px;">
-        <p>INSTRUCCIONES CRÍTICAS:</p>
-        <p>1. Arrastra la tarjeta ID al lector biometríco.</p>
-        <p>2. El sistema requiere una ventana estrecha (menos de 800px) para validar el código.</p>
-        <p>3. El código debe seguir el formato: SEC- seguido de 4 números.</p>
-    </div>
+        <h2>Fase 2: Terminal de Seguridad Máxima</h2>
+        
+        <div id="manual-instrucciones" style="height: 80px; overflow-y: scroll; background: #eee; border: 1px solid #ccc; padding: 10px;">
+            <p>INSTRUCCIONES CRÍTICAS:</p>
+            <p>1. Arrastra la tarjeta ID al lector biometríco.</p>
+            <p>2. El sistema requiere una ventana estrecha (menos de 800px) para validar el código.</p>
+            <p>3. El código debe seguir el formato: SEC- seguido de 4 números.</p>
+        </div>
 
-    <div style="display: flex; justify-content: space-around; margin: 20px;">
-        <div id="tarjeta-id" draggable="true" style="width: 80px; height: 50px; background: blue; color: white; cursor: move;">TARJETA ID</div>
-        <div id="lector-biometrico" style="width: 100px; height: 70px; border: 2px dashed #666;">LECTOR</div>
-    </div>
+        <div style="display: flex; justify-content: space-around; margin: 20px;">
+            <div id="tarjeta-id" draggable="true" style="width: 80px; height: 50px; background: blue; color: white; cursor: move;">TARJETA ID</div>
+            <div id="lector-biometrico" style="width: 100px; height: 70px; border: 2px dashed #666;">LECTOR</div>
+        </div>
 
-    <form id="form-final">
-        <input type="text" id="input-final" placeholder="SEC-0000">
-        <button type="submit" id="btn-enviar">AUTORIZAR ACCESO</button>
-    </form>
+        <form id="form-final">
+            <input type="text" id="input-final" placeholder="SEC-0000">
+            <button type="submit" id="btn-enviar">AUTORIZAR ACCESO</button>
+        </form>
 
-    <div id="contenedor-ayuda" style="margin-top: 20px;">
-        <button class="btn-extra" data-info="pista">Ver Pista</button>
-        <button class="btn-extra" data-info="soporte">Llamar Soporte</button>
+        <div id="contenedor-ayuda" style="margin-top: 20px;">
+            <button class="btn-extra" data-info="pista">Ver Pista</button>
+            <button class="btn-extra" data-info="soporte">Llamar Soporte</button>
+        </div>
+        <div id="navegador" >Navegador</div>
+        <div id="Location" >Location</div>
+        
+        <button id="crear">Crear un elemento</button>
+        <div id="resultado"></div>
     </div>
-</div>
     <script src="sala4.js"></script>
 </body>
 </html>
