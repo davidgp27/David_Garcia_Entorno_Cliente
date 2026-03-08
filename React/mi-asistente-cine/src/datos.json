@@ -1,0 +1,14 @@
+{
+  "opciones": ["Acción", "Comedia", "Drama"],
+  "recomendaciones": [
+    {"id": 1, "titulo": "Mad Max", "genero": "Acción", "desc": "Persecuciones en un desierto post-apocalíptico."},
+    {"id": 2, "titulo": "John Wick", "genero": "Acción", "desc": "Un ex-asesino busca venganza por su perro."},
+    {"id": 3, "titulo": "Die Hard", "genero": "Acción", "desc": "Un policía atrapado en un rascacielos con terroristas."},
+    {"id": 4, "titulo": "Superbad", "genero": "Comedia", "desc": "Dos amigos intentan comprar alcohol para una fiesta."},
+    {"id": 5, "titulo": "The Hangover", "genero": "Comedia", "desc": "Una despedida de soltero en Las Vegas sale muy mal."},
+    {"id": 6, "titulo": "Airplane!", "genero": "Comedia", "desc": "Una parodia desternillante de las películas de desastres."},
+    {"id": 7, "titulo": "The Whale", "genero": "Drama", "desc": "Un profesor solitario intenta reconectar con su hija."},
+    {"id": 8, "titulo": "The Godfather", "genero": "Drama", "desc": "La crónica de una familia de la mafia italiana."},
+    {"id": 9, "titulo": "Parasite", "genero": "Drama", "desc": "Una familia pobre se infiltra en una casa rica."}
+  ]
+}
