@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 export default function Navbar({ darkMode, setDarkMode }) {
-  const [menuAbierto, setMenuAbierto] = useState(false); // useState obligatorio 
+  const [menuAbierto, setMenuAbierto] = useState(false);  
 
   return (
     <nav className="navbar">

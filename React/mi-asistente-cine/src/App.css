@@ -155,20 +155,3 @@
   background: #dc3545;
 }
 
-/* Estilos para Favoritos */
-.favoritos-container {
-  flex: 1;
-  width: 90%;
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 30px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
-
-.dark-mode .favoritos-container {
-  background: #1e1e1e;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-  color: #f0f0f0; /* Texto claro en dark mode */
-}

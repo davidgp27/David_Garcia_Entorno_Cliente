@@ -2,15 +2,15 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import Navbar from './Navbar';
 import Chat from './chat';
-import datosRaw from './datos.json'; // Importado como módulo [cite: 16]
+import datosRaw from './datos.json'; // Importado como módulo 
 import './App.css';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false); // useState 1 [cite: 53]
+  const [darkMode, setDarkMode] = useState(false); // useState 1 
 
   // REQUISITO: Usar JSON.parse con reactivador 
   const datosFinales = JSON.parse(JSON.stringify(datosRaw), (key, value) => {
-    if (key === 'genero') return value.toUpperCase(); // Formateo de salida [cite: 15]
+    if (key === 'genero') return value.toUpperCase(); // Formateo de salida 
     return value;
   });
 
