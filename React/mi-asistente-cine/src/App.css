@@ -1,0 +1,174 @@
+/* Estilos para navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.dark-mode .navbar {
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.nav-links a:hover {
+  background: #007bff;
+  color: white;
+}
+
+.dark-mode .nav-links a {
+  color: #4dabf7;
+}
+
+.dark-mode .nav-links a:hover {
+  background: #4dabf7;
+  color: #121212;
+}
+
+.theme-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.theme-btn:hover {
+  background: #218838;
+}
+
+/* Contenedor centralizado pero amplio */
+.chat-container, .home {
+  flex: 1;
+  width: 90%;
+  max-width: 1000px; /* Un poco más ancho */
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.dark-mode .chat-container, .dark-mode .home {
+  background: #1e1e1e;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  color: #f0f0f0; /* Texto claro en dark mode */
+}
+
+.options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Estilos para chat */
+.opciones-box button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background 0.3s;
+}
+
+.opciones-box button:hover {
+  background: #0056b3;
+}
+
+/* Estilos para PeliculaCard */
+.movie-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px 0;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.dark-mode .movie-card {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+.movie-card:hover {
+  transform: translateY(-2px);
+}
+
+.genero-tag {
+  display: inline-block;
+  background: #28a745;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  margin-bottom: 5px;
+}
+
+.fav-btn {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.fav-btn:hover {
+  background: #e9ecef;
+}
+
+.fav-btn.active {
+  background: #dc3545;
+  color: white;
+  border-color: #dc3545;
+}
+
+.dark-mode .fav-btn {
+  background: #333;
+  border-color: #555;
+  color: #f0f0f0;
+}
+
+.dark-mode .fav-btn.active {
+  background: #dc3545;
+}
+
+/* Estilos para Favoritos */
+.favoritos-container {
+  flex: 1;
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.dark-mode .favoritos-container {
+  background: #1e1e1e;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  color: #f0f0f0; /* Texto claro en dark mode */
+}
